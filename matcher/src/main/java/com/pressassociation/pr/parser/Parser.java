@@ -40,7 +40,8 @@ import static com.google.common.base.Preconditions.checkNotNull;
  */
 public class Parser {
   // matcher for non-whitespace and non special chars ,/()*
-  private static final CharMatcher WORD_CHAR_MATCHER = CharMatcher.WHITESPACE.negate().and(CharMatcher.noneOf(",/()*"));
+  private static final CharMatcher WORD_CHAR_MATCHER =
+    CharMatcher.whitespace().negate().and(CharMatcher.noneOf(",/()*"));
 
   /**
    * Parse the given partial response input, return the Ast for the pattern.
