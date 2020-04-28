@@ -30,7 +30,7 @@ import static com.google.common.base.Preconditions.checkState;
 
 /**
  * Prepends a prefix to the visited ast.
- * <p/>
+ *
  * For example:
  * {@code items/id} with prefix {@code nested} becomes {@code nested/items/id}
  *

@@ -34,9 +34,9 @@ import static com.google.common.base.Preconditions.checkState;
 
 /**
  * A visitor that will take an ast and expand out sub selection groups to their own paths.
- * <p/>
- * For example:<br/>
- * {@code items(id, name) -> items/id,items/name}<br/>
+ *
+ * For example:<br>
+ * {@code items(id, name) -> items/id,items/name}<br>
  * {@code items(id, homeTown/id)/auth -> items/id/auth,items/homeTown/id/auth}
  *
  * @author Matt Nathan
