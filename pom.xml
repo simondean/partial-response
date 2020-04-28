@@ -67,6 +67,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <guava.version>29.0-jre</guava.version>
+    <jackson.version>2.11.0</jackson.version>
   </properties>
 
   <dependencyManagement>

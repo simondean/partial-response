@@ -24,6 +24,7 @@
 
 package com.pressassociation.pr.filter.json.jackson;
 
+import com.fasterxml.jackson.databind.introspect.AnnotatedClassResolver;
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 
@@ -141,8 +142,8 @@ public class JacksonRequestParamFilterTest {
 
   private void assertConfiguredWithMatcher(ObjectMapper mapper, Matcher matcher) {
     AnnotationIntrospector introspector = mapper.getSerializationConfig().getAnnotationIntrospector();
-    Object filterId = introspector.findFilterId((Annotated) AnnotatedClass.construct(
-        TestObject.class, introspector, mapper.getDeserializationConfig()));
+    Object filterId = introspector.findFilterId(AnnotatedClassResolver.resolveWithoutSuperTypes(
+        mapper.getDeserializationConfig(), TestObject.class));
     assertNotNull(filterId);
 
     PropertyFilter propertyFilter =
@@ -154,8 +155,8 @@ public class JacksonRequestParamFilterTest {
 
   private void assertConfiguredWithoutMatcher(ObjectMapper mapper) {
     AnnotationIntrospector introspector = mapper.getSerializationConfig().getAnnotationIntrospector();
-    Object filterId = introspector.findFilterId((Annotated) AnnotatedClass.construct(
-        TestObject.class, introspector, mapper.getDeserializationConfig()));
+    Object filterId = introspector.findFilterId(AnnotatedClassResolver.resolveWithoutSuperTypes(
+        mapper.getDeserializationConfig(), TestObject.class));
     assertNull(filterId);
   }
 }

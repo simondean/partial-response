@@ -14,10 +14,6 @@
   <name>Partial Response: Jackson JSON Filter</name>
   <description>Filter for json output that is based on the jackson library</description>
 
-  <properties>
-    <jackson.version>2.3.1</jackson.version>
-  </properties>
-
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
