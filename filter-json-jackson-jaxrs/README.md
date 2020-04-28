@@ -13,7 +13,7 @@ To use this library in your Maven project simply include the dependency
 
 ```xml
 <dependency>
-  <groupId>com.pressassociation.partial-response</groupId>
+  <groupId>org.simondean.partial-response</groupId>
   <artifactId>filter-json-jackson-jaxrs</artifactId>
   <version>1.0</version>
 </dependency>

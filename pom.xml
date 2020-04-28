@@ -7,7 +7,7 @@
     <version>9</version>
   </parent>
 
-  <groupId>com.pressassociation.partial-response</groupId>
+  <groupId>org.simondean.partial-response</groupId>
   <artifactId>partial-response</artifactId>
   <version>1.1-SNAPSHOT</version>
   <packaging>pom</packaging>
@@ -15,7 +15,7 @@
   <name>Partial Response: Parent</name>
   <description>Parent pom for the partial-response project</description>
   <inceptionYear>2012</inceptionYear>
-  <url>https://github.com/PressAssociation/partial-response</url>
+  <url>https://github.com/simondean/partial-response</url>
 
   <licenses>
     <license>
@@ -26,19 +26,19 @@
   </licenses>
 
   <scm>
-    <connection>scm:git:git@github.com:PressAssociation/partial-response.git</connection>
-    <developerConnection>scm:git:git@github.com:PressAssociation/partial-response.git</developerConnection>
-    <url>https://github.com/PressAssociation/partial-response</url>
+    <connection>scm:git:git@github.com:simondean/partial-response.git</connection>
+    <developerConnection>scm:git:git@github.com:simondean/partial-response.git</developerConnection>
+    <url>https://github.com/simondean/partial-response</url>
     <tag>HEAD</tag>
   </scm>
 
   <developers>
     <developer>
-      <id>mattnathan</id>
-      <name>Matt Nathan</name>
-      <email>matt.nathan+partial-response@gmail.com</email>
-      <organization>Press Association</organization>
-      <organizationUrl>http://pressassociation.com</organizationUrl>
+      <id>simondean</id>
+      <name>Simon Dean</name>
+      <email>simon@simondean.org</email>
+      <organization>Simon Dean</organization>
+      <organizationUrl>http://www.simondean.org</organizationUrl>
       <roles>
         <role>owner</role>
         <role>developer</role>
@@ -49,12 +49,12 @@
 
   <issueManagement>
     <system>GitHub</system>
-    <url>https://github.com/PressAssociation/partial-response/issues</url>
+    <url>https://github.com/simondean/partial-response/issues</url>
   </issueManagement>
 
   <ciManagement>
-    <system>Bamboo</system>
-    <url>http://bamboo.howden.press.net/</url>
+    <system>Travis CI</system>
+    <url>https://travis-ci.org/github/simondean/partial-response</url>
   </ciManagement>
 
   <modules>
@@ -121,8 +121,8 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.2</version>
           <configuration>
-            <source>1.6</source>
-            <target>1.6</target>
+            <source>1.8</source>
+            <target>1.8</target>
           </configuration>
         </plugin>
 
@@ -165,8 +165,8 @@
       <plugin>
         <artifactId>maven-checkstyle-plugin</artifactId>
         <configuration>
-          <configLocation>config/checkstyle.xml</configLocation>
-          <suppressionsLocation>config/checkstyle-suppressions.xml</suppressionsLocation>
+          <configLocation>checkstyle/checkstyle.xml</configLocation>
+          <suppressionsLocation>checkstyle/checkstyle-suppressions.xml</suppressionsLocation>
           <consoleOutput>true</consoleOutput>
           <enableRulesSummary>false</enableRulesSummary>
           <includeTestSourceDirectory>true</includeTestSourceDirectory>
@@ -178,13 +178,6 @@
             </goals>
           </execution>
         </executions>
-        <dependencies>
-          <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>check-style</artifactId>
-            <version>1</version>
-          </dependency>
-        </dependencies>
       </plugin>
     </plugins>
   </build>

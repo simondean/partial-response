@@ -1,7 +1,7 @@
 Partial Response
 ================
 
-[![Build Status](https://travis-ci.org/PressAssociation/partial-response.svg?branch=master)](https://travis-ci.org/PressAssociation/partial-response)
+[![Build Status](https://travis-ci.org/simondean/partial-response.svg?branch=master)](https://travis-ci.org/simondean/partial-response)
 
 This project provides a library to help with the processing and implementation of
 [partial response](http://googlecode.blogspot.co.uk/2010/03/making-apis-faster-introducing-partial.html) in an API.
@@ -17,7 +17,7 @@ To use this in your Maven project simply include the dependency
 
 ```xml
 <dependency>
-  <groupId>com.pressassociation.partial-response</groupId>
+  <groupId>org.simondean.partial-response</groupId>
   <artifactId>matcher</artifactId>
   <version>1.0</version>
 </dependency>
