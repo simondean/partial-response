@@ -28,5 +28,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 First release
 
 <!-- Releases -->
-[Unreleased]: https://github.com/simondean/partial-responses/compare/v1.1.0...master
-[1.1.0]:  https://github.com/simondean/partial-responses/compare/v1.0...v1.1.0
+[Unreleased]: https://github.com/simondean/partial-response/compare/v1.1.0...master
+[1.1.0]:  https://github.com/simondean/partial-response/compare/v1.0...v1.1.0
